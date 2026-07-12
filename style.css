@@ -250,3 +250,24 @@ main,section:last-of-type{scroll-margin-bottom:96px;}
 /* Social icon SVGs sit neatly inside their tiles */
 .social a svg{width:18px;height:18px;display:block;}
 .social a{font-size:0;}
+
+
+/* ---------- TOP UTILITY BAR ---------- */
+.topbar{background:var(--dark);color:#fff;font-size:13px;}
+.topbar .tb-inner{max-width:1200px;margin:0 auto;padding:8px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.topbar .tb-left{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+.topbar a,.topbar span{color:rgba(255,255,255,.9);display:inline-flex;align-items:center;gap:7px;font-weight:500;}
+.topbar a:hover{color:#fff;}
+.topbar a svg{width:14px;height:14px;flex:none;}
+.topbar .tb-cities{color:rgba(255,255,255,.65);}
+@media(max-width:768px){
+  .topbar .tb-inner{padding:7px 16px;justify-content:center;}
+  .topbar .tb-cities{display:none;}
+  .topbar .tb-left{gap:16px;justify-content:center;}
+}
+
+/* ---------- HEADER CTA (persistent, desktop) ---------- */
+.header-cta{background:var(--brand);color:#fff;padding:10px 20px;border-radius:999px;font-weight:600;font-size:14.5px;white-space:nowrap;box-shadow:0 8px 20px -6px rgba(230,115,58,.55);transition:transform .18s ease,box-shadow .18s ease;}
+.header-cta:hover{color:#fff;transform:translateY(-2px);box-shadow:0 12px 26px -6px rgba(230,115,58,.6);}
+.header-cta:after{display:none;}
+@media(max-width:768px){ .header-cta{display:none;} }
