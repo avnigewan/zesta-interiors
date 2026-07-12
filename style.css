@@ -271,3 +271,8 @@ main,section:last-of-type{scroll-margin-bottom:96px;}
 .header-cta:hover{color:#fff;transform:translateY(-2px);box-shadow:0 12px 26px -6px rgba(230,115,58,.6);}
 .header-cta:after{display:none;}
 @media(max-width:768px){ .header-cta{display:none;} }
+
+
+/* ---------- TOP UTILITY BAR — icon sizing & no-wrap fix ---------- */
+.topbar a,.topbar span{white-space:nowrap;}
+.topbar svg{width:14px;height:14px;flex:none;}
