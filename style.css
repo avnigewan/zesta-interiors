@@ -162,3 +162,24 @@ footer a:hover{color:var(--brand);padding-left:3px;}
 /* ---------- NAV RESPONSIVE FIX ---------- */
 @media(max-width:1024px){.nav-links{gap:20px;font-size:14px;}}
 @media(max-width:900px){nav .btn{display:none;}.nav-links{gap:16px;}}
+
+
+/* ---------- MOBILE MENU ---------- */
+.nav-toggle{display:none;}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;cursor:pointer;border-radius:10px;transition:.2s;}
+.hamburger span{display:block;width:24px;height:2.5px;background:var(--dark);border-radius:2px;transition:.3s;margin:0 auto;}
+.nav-toggle:checked ~ .hamburger span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+.nav-toggle:checked ~ .hamburger span:nth-child(2){opacity:0;}
+.nav-toggle:checked ~ .hamburger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+.mobile-cta{display:none;}
+@media(max-width:768px){
+  .hamburger{display:flex;}
+  nav{flex-wrap:wrap;}
+  nav > .btn{display:none;}
+  .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:0;width:100%;max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .nav-toggle:checked ~ .nav-links{max-height:420px;padding-top:8px;}
+  .nav-links a{width:100%;padding:14px 4px;border-bottom:1px solid var(--line);font-size:16px;}
+  .nav-links a:after{display:none;}
+  .nav-links .mobile-cta{display:block;width:100%;border:none;padding:16px 4px;}
+  .nav-links .mobile-cta .btn{width:100%;text-align:center;margin-top:6px;}
+}
