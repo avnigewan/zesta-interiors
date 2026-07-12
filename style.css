@@ -245,3 +245,8 @@ main,section:last-of-type{scroll-margin-bottom:96px;}
 /* Keep pricing CTAs clear of the float: add trailing space in the pricing grid */
 .pricing .grid{padding-bottom:8px;}
 .price-card .btn.full,.price-card .btn{position:relative;z-index:2;}
+
+
+/* Social icon SVGs sit neatly inside their tiles */
+.social a svg{width:18px;height:18px;display:block;}
+.social a{font-size:0;}
