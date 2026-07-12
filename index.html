@@ -4,90 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zesta Interiors — End-to-End Home Interior Design</title>
-<style>
-  :root{--brand:#e6733a;--dark:#1d1d1f;--gray:#6b7280;--bg:#faf7f3;--gold:#c9a24b;}
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Helvetica,Arial,sans-serif;}
-  body{color:var(--dark);background:#fff;line-height:1.6;}
-  a{text-decoration:none;color:inherit;}
-  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
-  header{position:sticky;top:0;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.06);z-index:100;}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1180px;margin:0 auto;}
-  .logo{font-size:24px;font-weight:800;letter-spacing:-.5px;}
-  .logo span{color:var(--brand);}
-  .nav-links{display:flex;gap:28px;font-weight:500;font-size:15px;}
-  .nav-links a:hover{color:var(--brand);}
-  .btn{background:var(--brand);color:#fff;padding:11px 22px;border-radius:6px;font-weight:600;border:none;cursor:pointer;font-size:15px;transition:.2s;}
-  .btn:hover{background:#cf5f2a;}
-  .hero{background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff;padding:110px 0;text-align:center;}
-  .hero h1{font-size:48px;font-weight:800;max-width:760px;margin:0 auto 18px;line-height:1.15;}
-  .hero p{font-size:19px;max-width:600px;margin:0 auto 32px;opacity:.95;}
-  .hero .btn{padding:15px 34px;font-size:17px;}
-  .stats{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;padding:50px 0;background:var(--bg);text-align:center;}
-  .stat h3{font-size:38px;color:var(--brand);font-weight:800;}
-  .stat p{color:var(--gray);font-weight:500;}
-  section{padding:80px 0;}
-  .section-title{text-align:center;margin-bottom:52px;}
-  .section-title h2{font-size:34px;font-weight:800;margin-bottom:10px;}
-  .section-title p{color:var(--gray);max-width:560px;margin:0 auto;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;}
-  .card{border:1px solid #eee;border-radius:12px;padding:32px 26px;transition:.25s;background:#fff;}
-  .card:hover{box-shadow:0 12px 30px rgba(0,0,0,.09);transform:translateY(-4px);}
-  .card .icon{font-size:38px;margin-bottom:16px;}
-  .card h3{font-size:20px;margin-bottom:10px;}
-  .card p{color:var(--gray);font-size:15px;}
-  .rooms{background:var(--bg);}
-  .room-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
-  .room{position:relative;border-radius:12px;overflow:hidden;height:260px;cursor:pointer;}
-  .room img{width:100%;height:100%;object-fit:cover;transition:.4s;}
-  .room:hover img{transform:scale(1.08);}
-  .room span{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff;padding:40px 20px 18px;font-size:19px;font-weight:600;}
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:30px;text-align:center;}
-  .step .num{width:56px;height:56px;background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;margin:0 auto 16px;}
-  .step h3{margin-bottom:8px;}
-  .step p{color:var(--gray);font-size:15px;}
-  .testimonials{background:var(--dark);color:#fff;}
-  .testimonials .section-title h2{color:#fff;}
-  .t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;}
-  .t-card{background:#2a2a2d;border-radius:12px;padding:30px;}
-  .t-card .stars{color:var(--gold);margin-bottom:12px;}
-  .t-card p{font-style:italic;opacity:.9;margin-bottom:18px;}
-  .t-card .name{font-weight:700;}
-  .t-card .role{color:var(--gray);font-size:14px;}
-  .cta{background:linear-gradient(135deg,var(--brand),#a8481f);color:#fff;text-align:center;}
-  .cta h2{font-size:34px;margin-bottom:14px;}
-  .cta p{margin-bottom:30px;opacity:.95;}
-  .form{max-width:520px;margin:0 auto;display:grid;gap:14px;}
-  .form input,.form select{padding:14px;border-radius:8px;border:none;font-size:15px;}
-  .form button{background:var(--dark);color:#fff;padding:15px;border-radius:8px;border:none;font-weight:700;font-size:16px;cursor:pointer;}
-  .form button:hover{background:#000;}
-  footer{background:#111;color:#aaa;padding:50px 0 24px;}
-  .f-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:32px;}
-  footer h4{color:#fff;margin-bottom:14px;}
-  footer a{display:block;margin-bottom:8px;font-size:14px;}
-  footer a:hover{color:var(--brand);}
-  .copy{border-top:1px solid #333;padding-top:20px;text-align:center;font-size:13px;}
-  @media(max-width:768px){.nav-links{display:none;}.hero h1{font-size:34px;}.stats{gap:34px;}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
   <nav>
-    <div class="logo">Zesta<span> Interiors</span></div>
+    <a href="index.html" class="logo">Zesta<span> Interiors</span><small>Design that delights.</small></a>
     <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#rooms">Spaces</a>
-      <a href="#process">How It Works</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#book">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
     </div>
-    <a href="#book"><button class="btn">Book Free Consultation</button></a>
+    <a href="contact.html"><button class="btn">Free Consultation</button></a>
   </nav>
 </header>
 <section class="hero">
   <div class="container">
     <h1>Beautiful Home Interiors, Delivered End-to-End</h1>
     <p>From design to installation, Zesta turns your house into a home you'll love — on time and within budget.</p>
-    <a href="#book"><button class="btn">Get Your Free Design Quote</button></a>
+    <a href="contact.html"><button class="btn big">Get Your Free Design Quote</button></a>
   </div>
 </section>
 <div class="stats">
@@ -96,7 +33,7 @@
   <div class="stat"><h3>10 Yr</h3><p>Warranty</p></div>
   <div class="stat"><h3>4.8★</h3><p>Customer Rating</p></div>
 </div>
-<section id="services">
+<section>
   <div class="container">
     <div class="section-title"><h2>What We Offer</h2><p>Complete interior solutions handled by expert designers and a dedicated project team.</p></div>
     <div class="grid">
@@ -107,20 +44,7 @@
     </div>
   </div>
 </section>
-<section id="rooms" class="rooms">
-  <div class="container">
-    <div class="section-title"><h2>Designs for Every Space</h2><p>Explore inspiration for every room in your home.</p></div>
-    <div class="room-grid">
-      <div class="room"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"><span>Living Room</span></div>
-      <div class="room"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80"><span>Kitchen</span></div>
-      <div class="room"><img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80"><span>Bedroom</span></div>
-      <div class="room"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80"><span>Bathroom</span></div>
-      <div class="room"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80"><span>Home Office</span></div>
-      <div class="room"><img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80"><span>Kids Room</span></div>
-    </div>
-  </div>
-</section>
-<section id="process">
+<section class="rooms">
   <div class="container">
     <div class="section-title"><h2>How It Works</h2><p>A simple, transparent process from first meeting to move-in.</p></div>
     <div class="steps">
@@ -131,40 +55,20 @@
     </div>
   </div>
 </section>
-<section id="reviews" class="testimonials">
+<section class="cta">
   <div class="container">
-    <div class="section-title"><h2>Loved by Homeowners</h2><p>Real stories from families who transformed their homes with Zesta.</p></div>
-    <div class="t-grid">
-      <div class="t-card"><div class="stars">★★★★★</div><p>"The team understood exactly what we wanted. Our kitchen turned out better than the 3D preview!"</p><div class="name">Ananya R.</div><div class="role">Apartment, Bengaluru</div></div>
-      <div class="t-card"><div class="stars">★★★★★</div><p>"Delivered on time and stayed within budget. The project manager kept us updated at every step."</p><div class="name">Rahul M.</div><div class="role">Villa, Pune</div></div>
-      <div class="t-card"><div class="stars">★★★★★</div><p>"From wardrobes to lighting, every detail was thoughtful. Highly recommend for a full home."</p><div class="name">Priya & Sameer</div><div class="role">3BHK, Hyderabad</div></div>
-    </div>
-  </div>
-</section>
-<section id="book" class="cta">
-  <div class="container">
-    <h2>Book Your Free Consultation</h2>
-    <p>Tell us about your space and a Zesta designer will reach out within 24 hours.</p>
-    <form class="form" onsubmit="event.preventDefault();this.innerHTML='<h3 style=color:#fff>Thank you! 🎉 Our designer will contact you soon.</h3>';">
-      <input type="text" placeholder="Your Name" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <input type="email" placeholder="Email Address" required>
-      <select required>
-        <option value="">Property Type</option>
-        <option>1 BHK</option><option>2 BHK</option><option>3 BHK</option>
-        <option>Villa / Independent House</option><option>Office / Commercial</option>
-      </select>
-      <button type="submit">Request Free Quote</button>
-    </form>
+    <h2>Ready to Design Your Dream Home?</h2>
+    <p>Book a free consultation and get a personalised 3D design.</p>
+    <a href="contact.html"><button class="btn big dark">Book Free Consultation</button></a>
   </div>
 </section>
 <footer>
   <div class="container">
     <div class="f-grid">
       <div><div class="logo" style="color:#fff">Zesta<span> Interiors</span></div><p style="margin-top:12px;font-size:14px">Designing beautiful, functional homes — end to end.</p></div>
-      <div><h4>Company</h4><a href="#">About Us</a><a href="#">Careers</a><a href="#">Our Designers</a></div>
-      <div><h4>Services</h4><a href="#services">Full Home</a><a href="#services">Kitchens</a><a href="#services">Wardrobes</a></div>
-      <div><h4>Support</h4><a href="#">Warranty</a><a href="#">FAQs</a><a href="#book">Contact Us</a></div>
+      <div><h4>Company</h4><a href="about.html">About Us</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a></div>
+      <div><h4>Services</h4><a href="index.html">Full Home</a><a href="index.html">Kitchens</a><a href="index.html">Wardrobes</a></div>
+      <div><h4>Support</h4><a href="contact.html">Contact Us</a><a href="#">Warranty</a><a href="#">FAQs</a></div>
     </div>
     <div class="copy">© 2026 Zesta Interiors. All rights reserved.</div>
   </div>
