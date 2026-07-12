@@ -276,3 +276,30 @@ main,section:last-of-type{scroll-margin-bottom:96px;}
 /* ---------- TOP UTILITY BAR — icon sizing & no-wrap fix ---------- */
 .topbar a,.topbar span{white-space:nowrap;}
 .topbar svg{width:14px;height:14px;flex:none;}
+
+
+/* ---------- VASTU SENSE TOOL ---------- */
+.vastu-tool{display:grid;grid-template-columns:340px 1fr;gap:32px;align-items:start;background:linear-gradient(180deg,#fff,var(--bg));border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);}
+.vastu-form{display:flex;flex-direction:column;gap:18px;}
+.vfield{display:flex;flex-direction:column;gap:7px;}
+.vfield label{font-weight:600;font-size:14px;color:var(--dark);}
+.vfield select{padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-size:15px;background:#fff;color:var(--ink);cursor:pointer;}
+.vfield select:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(230,115,58,.15);}
+.vastu-form .btn{margin-top:6px;}
+.vastu-result{min-height:120px;}
+.vastu-result .v-empty{color:var(--gray);padding:20px;border:1px dashed var(--line);border-radius:12px;text-align:center;}
+.v-head{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px;}
+.v-badge{display:inline-block;background:var(--soft);color:var(--brand-dark);font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:10px;}
+.v-head h3{font-family:'Fraunces',serif;font-size:26px;color:var(--dark);}
+.v-el{color:var(--gray);font-size:14px;margin-top:4px;}
+.v-note-in{color:var(--ink);margin-bottom:16px;}
+.vastu-result h4{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:8px;}
+.v-tips{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:18px;}
+.v-tips li{position:relative;padding-left:26px;color:var(--ink);line-height:1.55;}
+.v-tips li:before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-dark));}
+.v-focus{background:var(--soft);border-radius:12px;padding:14px 16px;color:var(--dark);font-size:14.5px;line-height:1.55;}
+.v-cta{margin-top:18px;}
+.v-note{text-align:center;color:var(--gray);font-size:13px;margin-top:22px;max-width:680px;margin-left:auto;margin-right:auto;}
+@media(max-width:768px){
+  .vastu-tool{grid-template-columns:1fr;padding:22px;gap:24px;}
+}
