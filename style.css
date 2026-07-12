@@ -195,3 +195,53 @@ footer a:hover{color:var(--brand);padding-left:3px;}
 .wa-float svg{width:24px;height:24px;flex:none}
 .wa-float .wa-txt{white-space:nowrap}
 @media(max-width:600px){.wa-float{padding:14px}.wa-float .wa-txt{display:none}}
+
+
+/* =====================================================
+   LOOK & FEEL REFINEMENTS (v2)
+   ===================================================== */
+
+/* Lighter, cleaner frosted header */
+header{background:rgba(255,255,255,.86);border-bottom:1px solid rgba(24,22,19,.06);box-shadow:0 1px 0 rgba(255,255,255,.6);}
+
+/* Hero: slightly smaller, more breathing room, safe side padding */
+.hero{padding:120px 0 108px;}
+.hero .container{padding-left:32px;padding-right:32px;}
+.hero h1{font-size:52px;line-height:1.06;max-width:860px;}
+@media(min-width:1100px){.hero h1{font-size:54px;}}
+
+/* Consistent vertical rhythm between sections */
+section{padding:88px 0;}
+
+/* Balance the 4-step process into an even single row (wraps 2x2 when tight) */
+.steps{grid-template-columns:repeat(4,1fr);gap:28px;}
+@media(max-width:880px){.steps{grid-template-columns:repeat(2,1fr);gap:36px 28px;}}
+@media(max-width:480px){.steps{grid-template-columns:1fr;}}
+
+/* Balance testimonials: center the grid so a lone 3rd card sits centered */
+.t-grid{grid-template-columns:repeat(3,1fr);max-width:1040px;margin:0 auto;}
+@media(max-width:940px){.t-grid{grid-template-columns:repeat(2,1fr);max-width:720px;}}
+@media(max-width:600px){.t-grid{grid-template-columns:1fr;max-width:420px;}}
+
+/* Service-card icons: replace emoji look with tidy accent tiles */
+.card .icon{background:var(--soft);color:var(--brand);}
+.card .icon svg{width:30px;height:30px;stroke:var(--brand);transition:stroke .28s;}
+.card:hover .icon svg{stroke:#fff;}
+.card:hover .icon{color:#fff;}
+
+/* Footer social: cleaner spacing + focus ring */
+.social a:focus-visible{outline:2px solid var(--brand);outline-offset:2px;}
+
+/* ---- WhatsApp float: stop it covering page CTAs ---- */
+/* Give every page room at the bottom so nothing hides behind the float */
+body{padding-bottom:0;}
+main,section:last-of-type{scroll-margin-bottom:96px;}
+/* Smaller, higher float; collapses to a round icon on narrower screens */
+.wa-float{right:22px;bottom:24px;padding:12px 18px 12px 15px;font-size:14.5px;box-shadow:0 10px 26px -8px rgba(37,211,102,.5);}
+@media(max-width:1024px){
+  .wa-float{padding:0;width:56px;height:56px;justify-content:center;border-radius:50%;}
+  .wa-float .wa-txt{display:none;}
+}
+/* Keep pricing CTAs clear of the float: add trailing space in the pricing grid */
+.pricing .grid{padding-bottom:8px;}
+.price-card .btn.full,.price-card .btn{position:relative;z-index:2;}
