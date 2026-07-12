@@ -183,3 +183,15 @@ footer a:hover{color:var(--brand);padding-left:3px;}
   .nav-links .mobile-cta{display:block;width:100%;border:none;padding:16px 4px;}
   .nav-links .mobile-cta .btn{width:100%;text-align:center;margin-top:6px;}
 }
+
+
+/* ===== Map embed ===== */
+.map-wrap{margin-top:56px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
+.map-wrap iframe{display:block;width:100%;height:340px;border:0;filter:saturate(1.05)}
+
+/* ===== WhatsApp float button ===== */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:120;display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:13px 20px 13px 16px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 12px 30px -8px rgba(37,211,102,.55);transition:transform .2s ease,box-shadow .2s ease}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 16px 36px -8px rgba(37,211,102,.65)}
+.wa-float svg{width:24px;height:24px;flex:none}
+.wa-float .wa-txt{white-space:nowrap}
+@media(max-width:600px){.wa-float{padding:14px}.wa-float .wa-txt{display:none}}
